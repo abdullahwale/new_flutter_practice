@@ -60,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {},
           child: NewTransaction(_addNewTransaction),
           behavior: HitTestBehavior.opaque,
+
         );
       },
     );
