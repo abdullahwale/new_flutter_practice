@@ -1,7 +1,7 @@
-import 'package:moneymanager/core/models/category.dart';
-import 'package:moneymanager/core/services/category_icon_service.dart';
-import 'package:moneymanager/core/viewmodels/base_model.dart';
-import 'package:moneymanager/locator.dart';
+import 'package:mony_manager_new/core/models/category.dart';
+import 'package:mony_manager_new/core/services/category_icon_service.dart';
+import 'package:mony_manager_new/core/viewmodels/base_model.dart';
+import 'package:mony_manager_new/locator.dart';
 
 class NewTransactionModel extends BaseModel {
   final CategoryIconService _categoryIconService =

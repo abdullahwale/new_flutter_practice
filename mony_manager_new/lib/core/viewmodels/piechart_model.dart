@@ -1,8 +1,8 @@
-import 'package:moneymanager/core/enums/viewstate.dart';
-import 'package:moneymanager/core/services/category_icon_service.dart';
-import 'package:moneymanager/core/viewmodels/base_model.dart';
-import 'package:moneymanager/core/database/moor_database.dart';
-import 'package:moneymanager/core/services/moordatabase_service.dart';
+import 'package:mony_manager_new/core/enums/viewstate.dart';
+import 'package:mony_manager_new/core/services/category_icon_service.dart';
+import 'package:mony_manager_new/core/viewmodels/base_model.dart';
+import 'package:mony_manager_new/core/database/moor_database.dart';
+import 'package:mony_manager_new/core/services/moordatabase_service.dart';
 import '../../locator.dart';
 
 class PieChartModel extends BaseModel {

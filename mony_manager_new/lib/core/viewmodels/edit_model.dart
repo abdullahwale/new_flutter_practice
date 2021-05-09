@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:moneymanager/core/database/moor_database.dart';
-import 'package:moneymanager/core/models/category.dart';
-import 'package:moneymanager/core/services/category_icon_service.dart';
-import 'package:moneymanager/core/services/moordatabase_service.dart';
-import 'package:moneymanager/core/viewmodels/base_model.dart';
+import 'package:mony_manager_new/core/database/moor_database.dart';
+import 'package:mony_manager_new/core/models/category.dart';
+import 'package:mony_manager_new/core/services/category_icon_service.dart';
+import 'package:mony_manager_new/core/services/moordatabase_service.dart';
+import 'package:mony_manager_new/core/viewmodels/base_model.dart';
 import 'package:toast/toast.dart';
 
 import '../../locator.dart';
