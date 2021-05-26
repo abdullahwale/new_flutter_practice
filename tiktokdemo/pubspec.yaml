@@ -14,7 +14,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # Read more about Android versioning at https://developer.android.com/studio/publish/versioning
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# https://developer.apple .com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
 environment:
@@ -27,24 +27,26 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  marquee: ^1.6.1
-  video_player: ^1.0.1
-  provider: ^4.3.2+3
-  uuid: ^2.2.2
-  firebase_core : ^0.5.0
+  firebase_core: ^0.5.0
   cloud_firestore: ^0.14.4
-  firebase_auth:
-  firebase_storage:
-  image_picker:
-  google_fonts:
-  path_provider:
-  intl:
-  file_picker:
-  video_compress:
-  timeago:
-  image:
-  esys_flutter_share:
+#  cupertino_icons: ^1.0.2
+#  marquee: any
+#  video_player: any
+#  provider: any
+#  uuid: any
+#  firebase_core : any
+#  cloud_firestore: any
+#  firebase_auth: any
+#  firebase_storage: any
+#  image_picker: any
+#  google_fonts: any
+#  path_provider: any
+#  intl: any
+#  file_picker: any
+#  video_compress: any
+#  timeago: any
+#  image: any
+#  esys_flutter_share: any
 
 
 dev_dependencies:
