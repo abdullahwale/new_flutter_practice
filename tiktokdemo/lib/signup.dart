@@ -20,7 +20,7 @@ class _SignUpState extends State<SignUp> {
         .createUserWithEmailAndPassword(
             email: emailControler.text, password: passwordControler.text)
         .then((signedUser) => {
-              userCollection.doc(signedUser.user.uid).set({
+              userCollection.doc(signedUser.user.).set({
                 'userName': userControler.text,
                 'password': passwordControler.text,
                 'email': emailControler.text,
