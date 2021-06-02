@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiktokdemo/signup.dart';
 import 'package:tiktokdemo/variable.dart';
 import 'home.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -109,9 +110,13 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Register",
-                  style: mystyle(20, Colors.purple),
+                InkWell(
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUp())),
+                  child: Text(
+                    "Register",
+                    style: mystyle(20, Colors.purple),
+                  ),
                 ) //
 
                 // Text
