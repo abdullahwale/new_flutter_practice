@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktokdemo/signup.dart';
 import 'package:tiktokdemo/variable.dart';
@@ -13,6 +14,23 @@ class _NavigationPageState extends State<NavigationPage> {
   bool isSigned = false;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    FirebaseAuth.instance.authStateChanges().listen((user) {
+      if (user != null) {
+        setState(() {
+          isSigned = true;
+        });
+      } else {
+        setState(() {
+          isSigned = false;
+        });
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: isSigned == false ? Login() : HomePage(),
@@ -26,6 +44,10 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController emailControler = TextEditingController();
+  TextEditingController passwordControler = TextEditingController();
+  TextEditingController userControler = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +75,7 @@ class _LoginState extends State<Login> {
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 20, right: 20),
                 child: TextField(
+                    controller: emailControler,
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
@@ -68,6 +91,7 @@ class _LoginState extends State<Login> {
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 20, right: 20),
                 child: TextField(
+                    controller: passwordControler,
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
@@ -79,17 +103,29 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              width: MediaQuery.of(context).size.width / 2,
-              // margin: EdgeInsets.only(left: 20, right: 20),
-              height: 50,
-              decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(20)), // BoxDecoration
-              child: Center(
-                child: Text("Login",
-                    style: mystyle(20, Colors.white, FontWeight.w700)),
-              ), // Center
+            InkWell(
+              onTap: () {
+                try {
+                  FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: emailControler.text,
+                      password: passwordControler.text);
+                } catch (e) {
+                  SnackBar snackbar = SnackBar(content: Text("Try Again"));
+                  ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                }
+              },
+              child: Container(
+                width: MediaQuery.of(context).size.width / 2,
+                // margin: EdgeInsets.only(left: 20, right: 20),
+                height: 50,
+                decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(20)), // BoxDecoration
+                child: Center(
+                  child: Text("Login",
+                      style: mystyle(20, Colors.white, FontWeight.w700)),
+                ), // Center
+              ),
             ),
             SizedBox(
               height: 20,

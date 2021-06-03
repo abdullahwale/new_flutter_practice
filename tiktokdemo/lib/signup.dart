@@ -20,7 +20,7 @@ class _SignUpState extends State<SignUp> {
         .createUserWithEmailAndPassword(
             email: emailControler.text, password: passwordControler.text)
         .then((signedUser) => {
-              userCollection.doc(signedUser.user.).set({
+              userCollection.doc(signedUser.user.uid).set({
                 'userName': userControler.text,
                 'password': passwordControler.text,
                 'email': emailControler.text,
@@ -29,6 +29,7 @@ class _SignUpState extends State<SignUp> {
                     'https://en.wikipedia.org/wiki/File:Blue_Unknot.png'
               })
             });
+    Navigator.pop(context);
   }
 
   @override
