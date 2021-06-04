@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (_) => EditNote(
-                                    docToEdit: snapshot.data.docs[index],
-                                  )));
+                                docToEdit: snapshot.data.docs[index],
+                              )));
                     },
                     child: Container(
                       margin: EdgeInsets.all(10),
