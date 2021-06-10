@@ -10,6 +10,38 @@ class Video extends StatefulWidget {
 }
 
 class _VideoState extends State<Video> {
+  buildProfile() {
+    return Container(
+      width: 60,
+      height: 60,
+      child: Stack(
+        children: [
+          Positioned(
+              left: (62 / 2) - (50 / 2),
+              child: Container(
+                width: 50,
+                height: 50,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                  child: Image(
+                    height: 10,
+                    width: 10,
+                    image: NetworkImage(
+                        'https://en.wikipedia.org/wiki/File:Blue_Unknot.png'),
+                    //fit: BoxFit.cover,
+                  ),
+                ),
+              )),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -74,6 +106,17 @@ class _VideoState extends State<Video> {
                                 style:
                                     mystyle(15, Colors.white, FontWeight.bold)),
                           ],
+                        ),
+                        //right section
+                        Container(
+                          width: 100,
+                          margin: EdgeInsets.only(top: 150),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              buildProfile(),
+                            ],
+                          ),
                         ),
                       ],
                     ),
