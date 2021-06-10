@@ -35,6 +35,7 @@ class _VideoState extends State<Video> {
                         'https://en.wikipedia.org/wiki/File:Blue_Unknot.png'),
                     //fit: BoxFit.cover,
                   ),
+                  /// TODO this is the area where i found an error
                 ),
               )),
         ],
