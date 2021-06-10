@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1079784779969",
+    "project_id": "tictok-46766",
+    "storage_bucket": "tictok-46766.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079784779969:android:8fc4dad514619017e26440",
+        "android_client_info": {
+          "package_name": "com.example.new_firebase_expence_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079784779969-3h402kmb25ig4q0igph9m5v4gd8f3ur6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.new_firebase_expence_app",
+            "certificate_hash": "f6277a52aef866ca1828c66132ba97a7cf098425"
+          }
+        },
+        {
+          "client_id": "1079784779969-ngvpu90v7fm11o4tje24hcd154tirqmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFBnZuUmhb-V8f6ahbaUDol-06Mj27DJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079784779969-ngvpu90v7fm11o4tje24hcd154tirqmb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

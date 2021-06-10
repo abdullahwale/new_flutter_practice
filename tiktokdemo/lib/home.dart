@@ -8,6 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List pageOptions = [];
   customeIcon() {
     return Container(
       width: 45,
