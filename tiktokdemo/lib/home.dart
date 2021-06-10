@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktokdemo/pages/addvideo.dart';
+import 'package:tiktokdemo/pages/messages.dart';
+import 'package:tiktokdemo/pages/profile.dart';
+import 'package:tiktokdemo/pages/search.dart';
+import 'package:tiktokdemo/pages/video.dart';
 import 'package:tiktokdemo/variable.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,7 +13,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List pageOptions = [];
+  List pageOptions = [Video(), Search(), AddVideoPage(), Messages(), Profile()];
+  int page = 0;
   customeIcon() {
     return Container(
       width: 45,
@@ -53,46 +59,53 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        body: pageOptions[page],
         bottomNavigationBar: BottomNavigationBar(
-      selectedItemColor: Colors.lightBlue,
-      unselectedItemColor: Colors.black,
-      items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          title: Text(
-            "Home",
-            style: mystyle(12),
-          ),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          title: Text(
-            "Search",
-            style: mystyle(12),
-          ),
-        ),
-        BottomNavigationBarItem(
-          icon: customeIcon(),
-          title: Text(
-            "",
-            style: mystyle(12),
-          ),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.message),
-          title: Text(
-            "Messages",
-            style: mystyle(12),
-          ),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          title: Text(
-            "Profile",
-            style: mystyle(12),
-          ),
-        ),
-      ],
-    ));
+          onTap: (index) {
+            setState(() {
+              page = index;
+            });
+          },
+          selectedItemColor: Colors.lightBlue,
+          unselectedItemColor: Colors.black,
+          currentIndex: page,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text(
+                "Home",
+                style: mystyle(12),
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              title: Text(
+                "Search",
+                style: mystyle(12),
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: customeIcon(),
+              title: Text(
+                "",
+                style: mystyle(12),
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.message),
+              title: Text(
+                "Messages",
+                style: mystyle(12),
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              title: Text(
+                "Profile",
+                style: mystyle(12),
+              ),
+            ),
+          ],
+        ));
   }
 }
