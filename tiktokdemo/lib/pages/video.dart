@@ -63,6 +63,18 @@ class _VideoState extends State<Video> {
                             style: mystyle(15, Colors.white, FontWeight.bold)),
                         Text("Cool Video ",
                             style: mystyle(15, Colors.white, FontWeight.bold)),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.music_note,
+                              size: 15,
+                              color: Colors.white,
+                            ),
+                            Text("Simple-Song",
+                                style:
+                                    mystyle(15, Colors.white, FontWeight.bold)),
+                          ],
+                        ),
                       ],
                     ),
                   )),
